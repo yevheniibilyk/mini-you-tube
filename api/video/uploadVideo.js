@@ -19,7 +19,7 @@ async function uploadVideo(req, res) {
   // Allow user to replace video and thumbnail for file with same name
   file.mv(videoPath, async (err) => {
     if (err) {
-      return res.status(500).send({ msg: 'Error occured.' });
+      return res.status(500).send({ msg: err.message });
     }
 
     try {

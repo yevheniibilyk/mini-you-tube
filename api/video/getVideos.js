@@ -1,9 +1,9 @@
 const fs = require('fs');
 const { promisify } = require('util');
-
-const readdirAsync = promisify(fs.readdir);
 const { isVideoFile, formVideoResponse } = require('./utils');
 const { mediaStoragePath } = require('../config');
+
+const readdirAsync = promisify(fs.readdir);
 
 /**
  * Returns a list of videos with their names and thumbnails

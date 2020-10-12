@@ -56,7 +56,7 @@ describe('Upload video route', () => {
   test('should handle save file error', async () => {
     await uploadVideo({
       files: {
-        file: { ...FILE, mv: (path, cb) => cb('ERROR') },
+        file: { ...FILE, mv: (path, cb) => cb({ message: 'Error occured.' }) },
       },
     },
     mockRes);
