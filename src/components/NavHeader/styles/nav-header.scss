@@ -27,7 +27,8 @@
     height: 35px;
   }
 
-  &__link {
+  &__link,
+  &__upload-btn {
     text-decoration: none;
     color: white;
 
@@ -37,8 +38,6 @@
   }
 
   &__upload-btn {
-    text-decoration: none;
-    color: white;
     margin-left: auto;
   }
 }
