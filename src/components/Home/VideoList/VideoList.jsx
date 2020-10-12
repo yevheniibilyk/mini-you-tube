@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import VideoCard from './VideoCard';
 import memoize from 'lodash.memoize';
+import debounce from 'lodash.debounce';
+import VideoCard from './VideoCard';
 import { axios } from '../../../utils';
 import './styles/video-list.scss';
 
@@ -34,7 +35,7 @@ class VideoList extends Component {
     onClick(video);
   })
 
-  fetchVideos = async () => {
+  fetchVideos = debounce(async () => {
     const { location } = this.props;
 
     try {
@@ -45,7 +46,7 @@ class VideoList extends Component {
       console.log(e);
       this.setState({ videos: [] });
     }
-  }
+  }, 400, { leading: true })
 
   render () {
     const { videos } = this.state;
