@@ -26,8 +26,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "start:api": "node ./api/index.js",
+    "test": "jest --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
