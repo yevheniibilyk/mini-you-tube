@@ -1,0 +1,44 @@
+.nav-header {
+  flex-grow: 1;
+
+  &__search {
+    align-items: center;
+    display: flex;
+    border-radius: 4px;
+    width: auto;
+    margin-left: 24px;
+    margin-right: 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &__search-icon {
+    padding: 0 5px;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &__search-input {
+    width: 100%;
+    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    height: 35px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: #61dafb;
+    }
+  }
+
+  &__upload-btn {
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+  }
+}
